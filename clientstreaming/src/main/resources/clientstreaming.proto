@@ -1,0 +1,19 @@
+syntax="proto3";
+option java_package="com";
+service clientstream{
+
+rpc bookcart(stream bookcartrequest)returns(bookcartresponse){}
+}
+message bookcartrequest{
+
+string name=1;
+string author=2;
+int32 price=3;
+
+}
+message bookcartresponse{
+int32 cart=1;
+int32 price=2;
+
+
+}
