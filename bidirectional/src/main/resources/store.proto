@@ -1,0 +1,17 @@
+syntax="proto3";
+option java_package="com";
+service mobilestore{
+rpc mobile(stream searchmob)returns(stream cart){}
+}
+message searchmob{
+string name=1;
+int32 price=2;
+string model=3;
+}
+message cart{
+
+int32 price=1;
+int32 nos=2;
+string name=3;
+string model=4;
+}
