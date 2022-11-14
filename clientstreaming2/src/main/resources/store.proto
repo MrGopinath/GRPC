@@ -1,0 +1,17 @@
+syntax="proto3";
+option java_package="com";
+service store{
+
+rpc deptstore(stream purchase)returns(total){}
+
+}
+message purchase{
+string name=1;
+int32 price=2;
+
+}
+message total{
+
+int32 nos=1;
+
+}
