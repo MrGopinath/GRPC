@@ -1,0 +1,15 @@
+syntax="proto3";
+option java_package="com";
+service unary{
+rpc bookstore(breq)returns(bres){}
+}
+message breq{
+string name=1;
+string author=2;
+string genre=3;
+}
+message bres{
+string name=1;
+string author=2;
+int32 price=3;
+}

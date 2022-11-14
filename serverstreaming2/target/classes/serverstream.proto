@@ -1,0 +1,17 @@
+syntax="proto3";
+option java_package="com";
+service serverstreaming{
+rpc authorsearch(areq)returns(stream ares){}
+}
+message areq{
+   string name = 1;
+   string author = 2;
+   string genre = 3;
+
+}
+message ares{
+
+  string name = 1;
+   string author = 2;
+   int32 price = 3;
+}
